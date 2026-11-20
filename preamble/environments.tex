@@ -1,0 +1,38 @@
+% !TeX root = ../main.tex
+% Upright text suits mixed Chinese/English statements; no decorative boxes.
+\newtheoremstyle{analysis}
+  {8pt}{6pt}{\normalfont}{0pt}{\bfseries}{.}{0.6em}{}
+\theoremstyle{analysis}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{example}[theorem]{例}
+\newtheorem{remark}[theorem]{注记}
+
+% exercisebody is an internal serial counter: every exercise gets a unique
+% hyperlink target, even if manual display numbers are repeated accidentally.
+% The public exercise counter tracks ONLY automatically numbered exercises.
+\newcounter{exercise}[section]
+\newtheorem{exercisebody}{习题}[section]
+\renewcommand{\theexercisebody}{\thesection.\arabic{exercise}}
+\NewDocumentEnvironment{exercise}{o}{%
+  \IfNoValueTF{#1}
+    {\stepcounter{exercise}}
+    {\renewcommand{\theexercisebody}{\thesection.#1}}%
+  \begin{exercisebody}%
+}{\end{exercisebody}}
+
+\renewcommand{\proofname}{证明}
+\NewDocumentEnvironment{solution}{}{\begin{proof}[解答]}{\end{proof}}
+
+\NewDocumentEnvironment{idea}{}
+  {\par\addvspace{6pt}\noindent\textbf{思路分析}\quad\ignorespaces}
+  {\par\addvspace{6pt}}
+\NewDocumentEnvironment{alternative}{}
+  {\par\addvspace{6pt}\noindent\textbf{另一种证明}\quad\ignorespaces}
+  {\par\addvspace{6pt}}
+\NewDocumentEnvironment{generalization}{}
+  {\par\addvspace{6pt}\noindent\textbf{推广}\quad\ignorespaces}
+  {\par\addvspace{6pt}}

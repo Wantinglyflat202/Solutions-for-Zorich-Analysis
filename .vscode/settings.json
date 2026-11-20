@@ -1,0 +1,26 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (project XeLaTeX)",
+      "tools": ["latexmk-project"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-project",
+      "command": "latexmk",
+      "args": ["-norc", "-r", "%DIR%/latexmkrc", "-cd", "%DOC%"]
+    }
+  ],
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.jobname": "Zorich_Analysis_Book1",
+  "latex-workshop.latex.rootFile.useSubFile": false,
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+  "latex-workshop.synctex.afterBuild.enabled": true
+}

@@ -1,0 +1,33 @@
+% !TeX root = ../main.tex
+% ctexbook loads the Chinese typesetting and font infrastructure.
+\usepackage{geometry}
+\geometry{a4paper,left=28mm,right=28mm,top=27mm,bottom=28mm,headheight=16pt}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{enumitem}
+\setlist{itemsep=0.25em,topsep=0.5em}
+\usepackage{microtype}
+
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+\linespread{1.12}
+\raggedbottom
+\pagestyle{headings}
+\ctexset{
+  chapter = {format=\centering\Large\bfseries,beforeskip=18pt,afterskip=24pt},
+  section = {format=\large\bfseries,beforeskip=18pt,afterskip=10pt}
+}
+
+% Load hyperlinks near the end; bookmark improves the PDF outline.
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{bookmark}
+\hypersetup{
+  pdftitle={Zorich Mathematical Analysis — Solutions: Book 1},
+  pdfauthor={Project contributors},
+  pdfsubject={独立习题解答；当前为工程框架与原创排版测试},
+  bookmarksnumbered=true,
+  pdfdisplaydoctitle=true
+}

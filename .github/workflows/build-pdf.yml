@@ -1,0 +1,40 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Install TeX Live and Chinese fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            latexmk texlive-xetex texlive-lang-chinese \
+            texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended lmodern
+
+      - name: Build Book 1
+        run: latexmk -norc -r latexmkrc main.tex
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v6
+        with:
+          name: Zorich_Analysis_Book1
+          path: build/Zorich_Analysis_Book1.pdf
+          if-no-files-found: error
+          retention-days: 30
