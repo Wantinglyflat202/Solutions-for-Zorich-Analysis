@@ -2,96 +2,111 @@
 % !TeX encoding = UTF-8
 
 % ===== BEGIN ORIGINAL TYPESETTING TESTS: delete this whole block later =====
-\subsection*{原创排版测试（非教材原题）}
-以下内容仅用于测试环境、编号及引用，不计入教材习题完成进度。
-其题号中的 T 表示测试；手动题号与原书无关。
+%\subsection*{原创排版测试（非教材原题）}
+%以下内容仅用于测试环境、编号及引用，不计入教材习题完成进度。
+%其题号中的 T 表示测试；手动题号与原书无关。
+%%%
+%\begin{definition}[距离的测试记号]
+%\label{def:b1-c1-s1-test-distance}
+%对 $x,y\in\R$，记 $d(x,y)=\abs{x-y}$。
+%\end{definition}
 
-\begin{definition}[距离的测试记号]
-\label{def:b1-c1-s1-test-distance}
-对 $x,y\in\R$，记 $d(x,y)=\abs{x-y}$。
-\end{definition}
+%\begin{lemma}[三角不等式测试]
+%\label{lem:b1-c1-s1-test-triangle}
+%对任意 $a,b\in\R$，有 $\abs{a+b}\leq\abs{a}+\abs{b}$。
+%\end{lemma}
+%\begin{proof}
+%由 $-\abs{a}\leq a\leq\abs{a}$ 和
+%$-\abs{b}\leq b\leq\abs{b}$ 相加即得结论。
+%\end{proof}
 
-\begin{lemma}[三角不等式测试]
-\label{lem:b1-c1-s1-test-triangle}
-对任意 $a,b\in\R$，有 $\abs{a+b}\leq\abs{a}+\abs{b}$。
-\end{lemma}
-\begin{proof}
-由 $-\abs{a}\leq a\leq\abs{a}$ 和
-$-\abs{b}\leq b\leq\abs{b}$ 相加即得结论。
-\end{proof}
+%\begin{exercise}[T1]
+%\label{ex:b1-c1-s1-test-reverse}
+%设 $x,y\in\R$，证明
+%\begin{equation}
+%  \label{eq:b1-c1-s1-test-reverse}
+ % \abs{\abs{x}-\abs{y}}\leq\abs{x-y}.
+%\end{equation}
+%\end{exercise}
+%\begin{solution}
+%由引理~\ref{lem:b1-c1-s1-test-triangle}，
+%$\abs{x}=\abs{(x-y)+y}\leq\abs{x-y}+\abs{y}$，
+%故 $\abs{x}-\abs{y}\leq\abs{x-y}$。
+%交换 $x,y$ 可得反向估计，从而得到式~\eqref{eq:b1-c1-s1-test-reverse}。
+%\end{solution}
+%\begin{idea}
+%分别估计差与其相反数，便可处理外层绝对值。
+%\end{idea}
+%\begin{alternative}
+%不妨设 $\abs{x}\geq\abs{y}$，直接对 $x=(x-y)+y$ 使用三角不等式；
+%另一种情况由对称性得到。
+%\end{alternative}
+%\begin{generalization}
+%任意赋范空间中的 $u,v$ 都满足
+%$\abs{\norm{u}-\norm{v}}\leq\norm{u-v}$，证明完全相同。
+%\end{generalization}
+
+%\begin{exercise}
+%\label{ex:b1-c1-s1-test-limit}
+%（自动编号测试）设实数列 $x_n\to a$，证明 $\abs{x_n}\to\abs{a}$。
+%\end{exercise}
+%\begin{solution}
+%任取 $\eps>0$。存在正整数 $N$，使得对所有 $n\geq N$，
+%有 $\abs{x_n-a}<\eps$。应用习题~\ref{ex:b1-c1-s1-test-reverse}，得到
+%\[
+%  \abs{\abs{x_n}-\abs{a}}\leq\abs{x_n-a}<\eps.
+%\]
+%这正是所需收敛结论的定义。
+%\end{solution}
+
+%\begin{theorem}[连续性的测试结论]
+%\label{thm:b1-c1-s1-test-continuity}
+%函数 $f\colon\R\to\R$，$f(x)=\abs{x}$ 在每一点连续。
+%\end{theorem}
+%\begin{proof}
+%给定 $a\in\R$ 及 $\eps>0$，取 $\delta=\eps$，再应用
+%式~\eqref{eq:b1-c1-s1-test-reverse} 即得。
+%\end{proof}
+
+%\begin{proposition}[复合的测试结论]
+%若实函数 $g$ 在 $a$ 处连续，则 $\abs{g}$ 在 $a$ 处连续。
+%\end{proposition}
+%\begin{proof}
+%由 $\abs{\abs{g(x)}-\abs{g(a)}}\leq\abs{g(x)-g(a)}$ 及连续性定义即得。
+%\end{proof}
+
+%\begin{corollary}
+%若 $x_n\to 0$，则 $\abs{x_n}\to 0$。
+%\end{corollary}
+%\begin{proof}
+%在习题~\ref{ex:b1-c1-s1-test-limit} 中令 $a=0$ 即得。
+%\end{proof}
+
+%\begin{example}[命令测试]
+%有限集合 $A=\set{0,1}\subset\N\subset\Z\subset\Q\subset\R\subset\C$，
+%且 $\int_0^1 x\dd x=\tfrac12$。
+%此处采用 $0\in\N$ 的约定；正式题解应按所用教材明确约定。
+%\end{example}
+
+
+% ===== END ORIGINAL TYPESETTING TESTS =====
+
 
 \begin{exercise}[T1]
-\label{ex:b1-c1-s1-test-reverse}
-设 $x,y\in\R$，证明
-\begin{equation}
-  \label{eq:b1-c1-s1-test-reverse}
-  \abs{\abs{x}-\abs{y}}\leq\abs{x-y}.
-\end{equation}
+  验证命题关系
 \end{exercise}
-\begin{solution}
-由引理~\ref{lem:b1-c1-s1-test-triangle}，
-$\abs{x}=\abs{(x-y)+y}\leq\abs{x-y}+\abs{y}$，
-故 $\abs{x}-\abs{y}\leq\abs{x-y}$。
-交换 $x,y$ 可得反向估计，从而得到式~\eqref{eq:b1-c1-s1-test-reverse}。
-\end{solution}
-\begin{idea}
-分别估计差与其相反数，便可处理外层绝对值。
-\end{idea}
-\begin{alternative}
-不妨设 $\abs{x}\geq\abs{y}$，直接对 $x=(x-y)+y$ 使用三角不等式；
-另一种情况由对称性得到。
-\end{alternative}
-\begin{generalization}
-任意赋范空间中的 $u,v$ 都满足
-$\abs{\norm{u}-\norm{v}}\leq\norm{u-v}$，证明完全相同。
-\end{generalization}
 
-\begin{exercise}
-\label{ex:b1-c1-s1-test-limit}
-（自动编号测试）设实数列 $x_n\to a$，证明 $\abs{x_n}\to\abs{a}$。
-\end{exercise}
 \begin{solution}
-任取 $\eps>0$。存在正整数 $N$，使得对所有 $n\geq N$，
-有 $\abs{x_n-a}<\eps$。应用习题~\ref{ex:b1-c1-s1-test-reverse}，得到
-\[
-  \abs{\abs{x_n}-\abs{a}}\leq\abs{x_n-a}<\eps.
-\]
-这正是所需收敛结论的定义。
+  本题目只需简单验证即可，看图说话
 \end{solution}
 
-\begin{theorem}[连续性的测试结论]
-\label{thm:b1-c1-s1-test-continuity}
-函数 $f\colon\R\to\R$，$f(x)=\abs{x}$ 在每一点连续。
-\end{theorem}
-\begin{proof}
-给定 $a\in\R$ 及 $\eps>0$，取 $\delta=\eps$，再应用
-式~\eqref{eq:b1-c1-s1-test-reverse} 即得。
-\end{proof}
+\begin{exercise}[T2]
+\label{ex:b1-c1-s1-q2}
+证明逻辑关系的等价关系
+\end{exercise}
 
-\begin{proposition}[复合的测试结论]
-若实函数 $g$ 在 $a$ 处连续，则 $\abs{g}$ 在 $a$ 处连续。
-\end{proposition}
-\begin{proof}
-由 $\abs{\abs{g(x)}-\abs{g(a)}}\leq\abs{g(x)-g(a)}$ 及连续性定义即得。
-\end{proof}
+\begin{solution}
+简要略过，全部写出真值表即可判断正确
 
-\begin{corollary}
-若 $x_n\to 0$，则 $\abs{x_n}\to 0$。
-\end{corollary}
-\begin{proof}
-在习题~\ref{ex:b1-c1-s1-test-limit} 中令 $a=0$ 即得。
-\end{proof}
+\end{solution}
 
-\begin{example}[命令测试]
-有限集合 $A=\set{0,1}\subset\N\subset\Z\subset\Q\subset\R\subset\C$，
-且 $\int_0^1 x\dd x=\tfrac12$。
-此处采用 $0\in\N$ 的约定；正式题解应按所用教材明确约定。
-\end{example}
-
-\begin{remark}[交叉引用测试]
-本节属于第~\ref{chap:b1-c1}~章的第~\ref{sec:b1-c1-s1}~节。
-定义~\ref{def:b1-c1-s1-test-distance} 与
-定理~\ref{thm:b1-c1-s1-test-continuity} 的引用可点击跳转。
-其他章节也使用相同的全局标签机制。
-\end{remark}
-% ===== END ORIGINAL TYPESETTING TESTS =====

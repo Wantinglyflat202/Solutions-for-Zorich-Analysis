@@ -1,0 +1,68 @@
+% !TeX root = ../../../main.tex
+% !TeX encoding = UTF-8
+
+% 第一册第一章第二节：在此编写习题解答。
+% 请先在 main.tex 中填写本节的实际标题。
+% 以下为写作模板，使用时去掉相应行开头的百分号。
+
+% \begin{exercise}[1]
+% \label{ex:b1-c1-s2-q1}
+% 在此写题意。
+% \end{exercise}
+% \begin{solution}
+% 在此写解答。
+% \end{solution}
+\begin{exercise}[T1]
+\label{ex:b1-c1-s2-q1}
+证明集合关系:\\
+\begin{align*}
+&(A\subset C)\land (B\subset C)\Leftrightarrow ((A\cup B)\subset C)\\
+&(C\subset A)\land (C\subset B)\Leftrightarrow (C\subset (A\cap B))\\
+&C_M(C_M A)=A\\
+&(A\subset C_M B)\Leftrightarrow (B\subset C_M A)\\
+&(A\subset B)\Leftrightarrow (C_M A\supset C_M B)
+\end{align*}
+\end{exercise}
+
+\begin{solution}
+\label{sol:b1-c1-s2-q1}
+.\\
+$(A\subset C)\land (B\subset C)\Leftrightarrow ((A\cup B)\subset C)$:
+\begin{align*}
+ (A\subset C)\land (B\subset C)&\Leftrightarrow (\forall x\in A, x\in C)\land (\forall x\in B,x\in C)\\
+&\Leftrightarrow \forall (x\in A)\lor (x\in B),x\in C\\
+&\Leftrightarrow \forall x\in (A\cup B),x\in C\\
+&\Leftrightarrow ((A\cup B)\subset C)
+\end{align*}
+$(C\subset A)\land (C\subset B)\Leftrightarrow (C\subset (A\cap B))$:
+\begin{align*}
+(C\subset A)\land (C\subset B)&\Leftrightarrow \forall x\in C,x\in A\land x\in B\\
+&\Leftrightarrow \forall x\in C,x\in A\cap B\\
+&\Leftrightarrow (C\subset (A\cap B))
+\end{align*}
+$C_M(C_M A)=A$:
+\begin{align*}
+(C_M(C_M A))&=\{x| x\in M\land x\notin C_M A\}\\
+&=\{x| x\in M\land \lnot (x\in C_M A) \}\\
+&=\{x| x\in M\land \lnot(x\in M\land x\notin A)\}\\
+&=\{x| x\in M \land (\lnot(x\in M)\lor (x\in A))\}\\
+&=\{x| x\in M\land \lnot (x\in M)\lor x\in M\land x\in A \}\\
+&=\{x| x\in M\land x\in A\}\\
+&=A
+\end{align*}
+$(A\subset C_M B)\Leftrightarrow (B\subset C_M A)$:
+\begin{align*}
+(A\subset C_M B)&\Leftrightarrow \forall x\in A, x\in C_M B\\
+&\Leftrightarrow \forall x\notin C_M B,x\notin A\\
+&\Leftrightarrow \forall x\in B,x\in C_M A\\
+&\Leftrightarrow (B\subset C_M A)
+\end{align*}
+$(A\subset B)\Leftrightarrow (C_M A\supset C_M B)$:
+\begin{align*}
+A\subset B&\Leftrightarrow \forall x\in A,x\in B\\
+&\Leftrightarrow \forall x\notin B,x\notin A\\
+&\Leftrightarrow \forall x\in C_M B,x\in C_M A\\
+&\Leftrightarrow C_M A\supset C_M B
+\end{align*}
+鉴于本书并非离散数学教材，因此相关命题证明并未完全按照命题语言严谨表述。
+\end{solution}
