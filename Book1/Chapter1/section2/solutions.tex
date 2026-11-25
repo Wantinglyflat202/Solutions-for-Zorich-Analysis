@@ -12,7 +12,7 @@
 % \begin{solution}
 % 在此写解答。
 % \end{solution}
-\begin{exercise}[T1]
+\begin{exercise}
 \label{ex:b1-c1-s2-q1}
 证明集合关系:\\
 \begin{align*}
@@ -65,4 +65,154 @@ A\subset B&\Leftrightarrow \forall x\in A,x\in B\\
 &\Leftrightarrow C_M A\supset C_M B
 \end{align*}
 鉴于本书并非离散数学教材，因此相关命题证明并未完全按照命题语言严谨表述。
+\end{solution}
+
+\begin{exercise}
+证明集合关系:
+\begin{align*}
+    &A\cup (B\cup C)=(A\cup B)\cup C\\
+    &A\cap (B\cap C)=(A\cap B)\cap C\\
+    &A\cap (B\cup C)=(A\cap B)\cup (A\cap C)\\
+    &A\cup (B\cap C)=(A\cup B)\cap (A\cup C)
+\end{align*}
+\end{exercise}
+\begin{solution}.\\
+$A\cup (B\cup C)=(A\cup B)\cup C$:
+\begin{align*}
+    x \in A\cup (B\cup C)&\Leftrightarrow x\in A\lor x\in (B\cup C)\\
+    &\Leftrightarrow x\in A\lor (x\in B\lor x\in C)\\
+    &\Leftrightarrow  (x\in A\lor x\in B)\lor x\in C\\
+    &\Leftrightarrow (x\in (A\cup B))\lor x\in C\\
+    &\Leftrightarrow x\in (A\cup B)\cup C
+\end{align*}
+$A\cap (B\cap C)=(A\cap B)\cap C$:
+\begin{align*}
+    x \in A\cap (B\cap C)&\Leftrightarrow x\in A\land x\in (B\cap C)\\
+    &\Leftrightarrow x\in A\land (x\in B\land x\in C)\\
+    &\Leftrightarrow  (x\in A\land x\in B)\land x\in C\\
+    &\Leftrightarrow (x\in (A\cap B))\land x\in C\\
+    &\Leftrightarrow x\in (A\cap B)\cap C
+\end{align*}
+$A\cap (B\cup C)=(A\cap B)\cup (A\cap C)$:
+\begin{align*}
+    x\in A\cap (B\cup C)&\Leftrightarrow x\in A \land x\in (B\cup C)\\
+    &\Leftrightarrow x\in A\land (x\in B\lor x\in C)\\
+    &\Leftrightarrow (x\in A\land x\in B)\lor (x\in A\land x\in C)\\
+    &\Leftrightarrow x\in (A\cap B)\lor x\in (A\cap C)\\
+    &\Leftrightarrow x\in (A\cap B)\cup (A\cap C)
+\end{align*}
+$A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$:
+\begin{align*}
+    x\in A\cup (B\cap C)&\Leftrightarrow x\in A \lor x\in (B\cap C)\\
+    &\Leftrightarrow x\in A\lor (x\in B\land x\in C)\\
+    &\Leftrightarrow (x\in A\lor x\in B)\land (x\in A\lor x\in C)\\
+    &\Leftrightarrow x\in (A\cup B)\land x\in (A\cup C)\\
+    &\Leftrightarrow x\in (A\cup B)\cap (A\cup C)
+\end{align*}
+\end{solution}
+
+\begin{exercise}
+证明以下命题:
+\begin{align*}
+    &C_M(A\cup B)=C_M A\cap C_M B\\
+    &C_M(A\cap B)=C_M A\cup C_M B
+\end{align*}
+\end{exercise}
+\begin{solution}.\\
+$C_M(A\cup B)=C_M A\cap C_M B$:
+\begin{align*}
+    x\in C_M(A\cup B)&\Leftrightarrow \lnot (x\in A\cup B)\\
+    &\Leftrightarrow \lnot (x\in A\land x\in B)\\
+    &\Leftrightarrow \lnot (x\in A)\lor \lnot (x\in B)\\
+    &\Leftrightarrow x\in C_M A\lor x\in C_M B\\
+    &\Leftrightarrow x\in (C_M A\cup C_M B)
+\end{align*}
+$C_M(A\cap B)=C_M A\cup C_M B$:
+\begin{align*}
+    x\in C_M(A\cap B)&\Leftrightarrow \lnot (x\in A\cap B)\\
+    &\Leftrightarrow \lnot (x\in A\lor x\in B)\\
+    &\Leftrightarrow \lnot (x\in A)\land \lnot (x\in B)\\
+    &\Leftrightarrow x\in C_M A\land x\in C_M B\\
+    &\Leftrightarrow x\in (C_M A\cap C_M B)
+\end{align*}
+\end{solution}
+
+\begin{exercise}
+    给出以下集合的笛卡尔积的几何解释:
+    \begin{align*}
+        & a)\text{两个线段}\\
+        & b)\text{两个直线}\\
+        & c)\text{直线与圆周}\\
+        & d)\text{直线与圆面}\\
+        & e)\text{两圆周}\\
+        & f)\text{圆周与圆面}
+    \end{align*}
+\end{exercise}
+\begin{solution}.\\
+    \begin{align*}
+        & a)\text{矩形}\\
+        & b)\text{平面}\\
+        & c)\text{圆柱面}\\
+        & d)\text{圆柱体}\\
+        & e)\text{圆环面}\\
+        & f)\text{圆环体}
+    \end{align*}
+\end{solution}
+\begin{exercise}
+    给出对应的笛卡尔平方对角线的几何解释
+\end{exercise}
+\begin{solution}.\\
+    \begin{align*}
+        &a)\text{对角线}\\
+        &b)\text{平面上y=x的直线}\\
+        &e)\text{圆周}
+    \end{align*}
+\end{solution}
+
+
+\begin{exercise}
+    证明以下命题:
+    \begin{align*}
+        &a) (X\times Y=\varnothing )\Leftrightarrow (X = \varnothing)\lor (Y=\varnothing)\\
+        &\text{在}X\times Y\neq \varnothing, A\times B\neq \varnothing \text{的前提下，证明下列命题}\\
+        &b) (A\times B\subset X\times Y)\Leftrightarrow (A\subset X)\land (B\subset Y)\\
+        &c) (X\times Y)\cup (Z\times Y)=(X\cup Z)\times Y\\
+        &d) (X\times Y)\cap (X^\prime \times Y^\prime)=(X\cap X^\prime)\times (Y\cap Y^\prime)  
+    \end{align*}
+\end{exercise}
+\begin{solution}.\\
+$(X\times Y=\varnothing )\Leftrightarrow (X = \varnothing)\lor (Y=\varnothing)$:
+\begin{align*}
+(X\times Y=\varnothing )&\iff \{(x,y)|x\in X,y\in Y\}=\varnothing\\
+&\iff X=\varnothing \lor Y=\varnothing
+\end{align*}
+$(A\times B\subset X\times Y)\Leftrightarrow (A\subset X)\land (B\subset Y)$:
+\begin{align*}
+    (A\times B\subset X\times Y)&\Leftrightarrow \forall (x,y),x\in A,y\in B,(x,y)\in X\times Y\\
+    &\Leftrightarrow \forall (x,y),x\in A,y\in B, \exists (c,d),c\in X,d\in Y,(x,y)=(c,d)\\
+    &\Leftrightarrow \forall x\in A,x\in X,\forall y\in B,y\in Y\\
+    &\Leftrightarrow (A\subset X)\land (B\subset Y)
+\end{align*}
+$(X\times Y)\cup (Z\times Y)=(X\cup Z)\times Y$:
+\begin{align*}
+    (x,y)\in ((X\times Y)\cup (Z\times Y))&\iff (x,y)\in X\times Y\lor (x,y)\in Z\times Y\\
+    &\iff (x\in X\land y\in Y)\lor(x\in Z\land y\in Y)\\
+    &\iff (x\in X\lor x\in Z)\land y\in Y\\
+    &\iff (x\in X\cup Z)\land y\in Y\\
+    &\iff (x,y) \in (X\cup Z)\times Y
+\end{align*}
+$(X\times Y)\cap (X^\prime \times Y^\prime)=(X\cap X^\prime)\times (Y\cap Y^\prime)$:
+\begin{align*}
+    (x,y)\in (X\times Y)\cap (X^\prime \times Y^\prime)&\iff (x,y)\in (X\times Y)\land (x,y)\in (X^\prime \times Y^\prime)\\
+    &\iff (x\in X\land y\in Y)\land (x\in X^\prime\land y\in Y^\prime)\\
+    &\iff (x\in X)\land (y\in Y)\land (x\in X^\prime)\land (y\in Y^\prime)\\
+    &\iff (x\in X\cap X^\prime)\land (y\in Y\cap Y^\prime)\\
+    &\iff (x,y)\in (X\cap X^\prime)\times (Y\cap Y^\prime)
+\end{align*}
+\end{solution}
+\begin{exercise}
+    对比习题3中的关系以及与$\S 1$习题二中的关系a),b),建立起命题逻辑运算$\lnot,\land,\lor $与集合运算$C,\cap,\cup $的关系
+\end{exercise}
+\begin{solution}.\\
+    可以对应到: 逻辑否即为取补集，逻辑或即为取并集，逻辑与即为取交集
 \end{solution}
