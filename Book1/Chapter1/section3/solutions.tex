@@ -1,3 +1,70 @@
 \begin{exercise}
     定义了关系的复合，证明关系性质
+    \label{def:b1-c1-s3-q1}
+    \begin{align*}
+        &\mathcal{R}_1 \circ \mathcal{R}_2:=\{(x,z)|\exists y(x\mathcal{R}_1y)\land (y\mathcal{R}_2 z)\}\\  
+        &\Delta_X \text{是集合}X^2\text{的对角线}   
+    \end{align*}
+    证明:
+    \begin{align*}
+        &a):\\
+        &\text{若} \mathcal{R}_1\subset X\times Y,\mathcal{R}_2\subset Y\times X\text{满足}(\mathcal{R}_2\circ\mathcal{R}_1=\Delta_X)\land(\mathcal{R}_1\circ\mathcal{R}_2=\Delta_Y)\\
+        &\text{则它们都是函数关系并且给出了集合X,Y之间的互逆映射}\\
+        &b):\\
+        &\mathcal{R}\subset X^2,\text{请证明}\mathcal{R}\text{的传递性等价于}\mathcal{R}\circ\mathcal{R}\subset\mathcal{R}\\
+        &c):\\
+        &\text{如果关系}\mathcal{R}^\prime\subset Y\times X\text{和}\mathcal{R}\subset X\times Y\text{满足}(y\mathcal{R}^\prime x)\Leftrightarrow (x\mathcal{R}y),\text{则称}\mathcal{R}^\prime\text{为}\mathcal{R}\text{的转置关系}\\
+        &\text{请证明}\mathcal{R}\subset X^2\text{的反对称性等价于}\mathcal{R}\cap \mathcal{R}^\prime \subset \Delta_X\\
+        &d):\\
+        &\text{请验证:当且仅当}\mathcal{R}\cup \mathcal{R}^\prime=X^2\text{时。集合X的任意两个元素由}\mathcal{R}\subset X^2\text{相联系（按照任意顺序）}
+    \end{align*}
 \end{exercise}
+\begin{solution}.\\
+a):\\
+\begin{align*}
+    &\forall x_1\in X,(x_1,x_1)\in \Delta_X\\
+    \Leftrightarrow&\exists y_0\in Y,(x_1,y_0)\in \mathcal{R}_1\land (y_0,x_1)\in \mathcal{R}_2\\
+    &\text{若}\exists y_1\neq y_0,(x_1,y_1)\in \mathcal{R}_1\\
+    \Rightarrow&(y_0,y_1)\in \mathcal{R}_1\circ\mathcal{R}_2\Rightarrow (y_0,y_1)\in \Delta_Y\Rightarrow y_0=y_1\text{导出矛盾}
+\end{align*}
+因此可以证明这两个关系均为函数关系，自然地，也就给出了一组互逆映射\\
+b):\\
+\begin{align*}
+\Rightarrow&:\\
+&(x,y)\in \mathcal{R}\land (y,z)\in \mathcal{R}\text{则}(x,z)\in \mathcal{R}\\
+\Rightarrow&\forall (x,y)\in \mathcal{R}\circ\mathcal{R},\exists z\in X,(x,z)\in \mathcal{R}\land (z,y)\in \mathcal{R}\\
+\Rightarrow&\text{由传递性}, (x,y)\in \mathcal{R}\\
+\Rightarrow&\mathcal{R}\circ \mathcal{R}\subset \mathcal{R}\\
+\Leftarrow&:\\
+&\forall (x,y)\in \mathcal{R},(y,z)\in \mathcal{R}\\
+\Rightarrow& (x,z)\in \mathcal{R}\circ\mathcal{R},\text{又}\mathcal{R}\circ\mathcal{R}\subset\mathcal{R}\\
+\Rightarrow& (x,z)\in \mathcal{R}\\
+\Rightarrow&\mathcal{R}\text{具有传递性}
+\end{align*}
+c):\\
+\begin{align*}
+\Rightarrow&:\\
+&\forall (x,y)\in \mathcal{R}\cap \mathcal{R}^\prime\\
+\Rightarrow&(x,y)\in \mathcal{R}\land (x,y)\in \mathcal{R}^\prime\\
+\Rightarrow&(x,y)\in \mathcal{R}\land (y,x)\in \mathcal{R}\text{（跟据转置关系的定义）}\\
+\Rightarrow&\text{跟据反对称性}x=y,(x,y)\in \Delta_X \Rightarrow \mathcal{R}\cap \mathcal{R}^\prime \subset \Delta_X\\
+\Leftarrow&:\\
+&\forall (x,y)\in \mathcal{R}\land (y,x)\in \mathcal{R}\\
+\Rightarrow&(x,y)\in \mathcal{R}\cap \mathcal{R}^\prime\\
+\Rightarrow& (x,y)\in \Delta_X\\
+\Rightarrow&x=y,\mathcal{R}\text{具有反对称性}
+\end{align*}
+d):\\
+\begin{align*}
+\Rightarrow&:\\
+&\forall x\in X,y\in X,(x,y)\in X^2=\mathcal{R}\cup \mathcal{R}^\prime\\
+\Rightarrow&(x,y)\in \mathcal{R}\lor(x,y)\in \mathcal{R}^\prime\\
+\Leftrightarrow&(x,y)\in \mathcal{R}\lor (y,x)\in \mathcal{R}\\
+\Rightarrow&\text{x,y肯定被联系起来，不考虑顺序的情况下}\\
+\Leftarrow&:\\
+&(x,y)\in X^2\Leftrightarrow x\in X,y\in X,\text{又}(x,y)\in \mathcal{R}\lor (y,x)\in \mathcal{R}\\
+\Leftrightarrow& (x,y) \in \mathcal{R}\lor (x,y)\in \mathcal{R}^\prime\\
+\Leftrightarrow&(x,y)\in \mathcal{R}\cup \mathcal{R}^\prime\\
+\Rightarrow&\mathcal{R}\cup \mathcal{R}^\prime=X^2
+\end{align*}
+\end{solution}

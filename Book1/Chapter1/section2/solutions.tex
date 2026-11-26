@@ -122,18 +122,18 @@ $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$:
 $C_M(A\cup B)=C_M A\cap C_M B$:
 \begin{align*}
     x\in C_M(A\cup B)&\Leftrightarrow \lnot (x\in A\cup B)\\
-    &\Leftrightarrow \lnot (x\in A\land x\in B)\\
-    &\Leftrightarrow \lnot (x\in A)\lor \lnot (x\in B)\\
-    &\Leftrightarrow x\in C_M A\lor x\in C_M B\\
-    &\Leftrightarrow x\in (C_M A\cup C_M B)
-\end{align*}
-$C_M(A\cap B)=C_M A\cup C_M B$:
-\begin{align*}
-    x\in C_M(A\cap B)&\Leftrightarrow \lnot (x\in A\cap B)\\
     &\Leftrightarrow \lnot (x\in A\lor x\in B)\\
     &\Leftrightarrow \lnot (x\in A)\land \lnot (x\in B)\\
     &\Leftrightarrow x\in C_M A\land x\in C_M B\\
     &\Leftrightarrow x\in (C_M A\cap C_M B)
+\end{align*}
+$C_M(A\cap B)=C_M A\cup C_M B$:
+\begin{align*}
+    x\in C_M(A\cap B)&\Leftrightarrow \lnot (x\in A\cap B)\\
+    &\Leftrightarrow \lnot (x\in A\land x\in B)\\
+    &\Leftrightarrow \lnot (x\in A)\lor \lnot (x\in B)\\
+    &\Leftrightarrow x\in C_M A\lor x\in C_M B\\
+    &\Leftrightarrow x\in (C_M A\cup C_M B)
 \end{align*}
 \end{solution}
 
