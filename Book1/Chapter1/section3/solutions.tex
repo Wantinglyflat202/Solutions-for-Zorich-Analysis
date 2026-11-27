@@ -68,3 +68,69 @@ d):\\
 \Rightarrow&\mathcal{R}\cup \mathcal{R}^\prime=X^2
 \end{align*}
 \end{solution}
+\begin{exercise}.\\
+    \label{def:b1-c1-s3-q2-layer}
+    设$f:X\to Y$是映射。元素$y\in Y$的原像$f^{-1}(y)\subset X$称为$y$上的层\\
+    \begin{align*}
+    a)&:\\
+    &\text{请指出映射}\mathbf{pr_1}: X_1\times X_2\to X_1,\mathbf{pr_2}: X_1\times X_2\to X_2 \text{的层}\\
+    b)&:\\
+    &\text{设}x_1\in X, x_2\in X,\text{如果}f(x_1)=f(x_2),\text{即如果}x_1,x_2\text{属于同一层}\\
+    &\text{就认为}x_1,x_2\text{由关系}\mathcal{R}\subset X^2\text{相联系},x_1\mathcal{R}x_2\\
+    &\text{请验证}:\mathcal{R}\text{是等价关系}\\
+    c)&:\\
+    &\text{请证明}:\text{映射}f:X\to Y\text{的层互不相交，并且所有层的并集是整个集合}X.\\
+    d)&:\\
+    &\text{请验证}:\text{利用集合的元素之间的任何等价关系，都可以把该集合表示为}\\
+    &\text{互不相交的等价元素类的并集的形式}
+    \end{align*}
+\end{exercise}
+\begin{solution}.\\
+\label{def:b1-c1-s3-q2-brieflayer}
+以下统一简写$y$上的层为$\mathbf{L} (y)$\\
+a):\\
+\begin{align*}
+\mathbf{pr_1}&:\\
+&\forall y\in X_1,\mathbf{L} (y)=\{(a,b)| (a,b)\in X_1\times X_2\land \mathbf{pr_1}((a,b))=y\}\\
+\mathbf{pr_2}&:\\
+&\forall y\in X_2,\mathbf{L} (y)=\{(a,b)| (a,b)\in X_1\times X_2\land \mathbf{pr_2}((a,b))=y\}
+\end{align*}
+b):\\
+\begin{align*}
+\text{自反性}&:\\
+&\forall x\in X,f(x)=f(x)\\
+\Rightarrow&x\mathcal{R}x\\
+\text{对称性}&:\\
+&\forall a,b\in X, a\mathcal{R}b\Leftrightarrow f(a)=f(b)\\
+\Rightarrow& f(b)=f(a)\\
+\Rightarrow& b\mathcal{R}a\\
+\text{传递性}&:\\
+&\forall a,b,c\in X,a\mathcal{R}b\land b\mathcal{R}c\Leftrightarrow f(a)=f(b)=f(c)\\
+\Rightarrow&f(a)=f(c)\\
+\Rightarrow&a\mathcal{R}c
+\end{align*}
+综上,$\mathcal{R}$为等价关系
+c):\\
+\begin{align*}
+&\text{若}\exists y_1,y_2,(y_1\neq y_2)\land \mathbf{L}(y_1)\cap \mathbf{L}(y_2)\neq \varnothing\\
+\Rightarrow & \exists x_1\in \mathbf{L}(y_1)\cap \mathbf{L}(y_2)\\
+\Rightarrow &\text{由定义}: f(x_1)=y_1\land f(x_2)=y_2\land(y_1\neq y_2)\\
+\Rightarrow &\text{而这于映射的单值性矛盾，因此不同的层必定不相交}\\
+&\forall x_1\in X,f(x_1)\in Y,\text{假设}f(x_1)=y_1\\
+\Rightarrow& x_1\in \mathbf{L}(y_1)\\
+\Rightarrow&\text{所有层的并集是整个集合}X
+\end{align*}
+d):\\
+定义等价类:$[x]=\{y|y\in X \land x\mathcal{R}y\}$\\
+先证明不同的等价类一定不相交:\\
+\begin{align*}
+&\text{若}\exists x_1,x_2\in X,[x_1]\neq [x_2]\land [x_1]\cap [x_2]\neq \varnothing\\
+\Rightarrow&\exists x_3\in X\land x_3\in  [x_1]\cap [x_2]\\
+\Rightarrow&x_3\mathcal{R}x_1\land x_3\mathcal{R}x_2\\
+\Rightarrow&\text{由等价关系的传递性以及对称性},x_1\mathcal{R}x_2,\text{与等价类不相同矛盾}\\
+\Rightarrow&\text{不同等价类一定不相交}
+\end{align*}
+再证明任何一个$x\in X$均属于一个等价类:\\
+显然，$\forall x_0\in X,x_0\in [x_0](\text{跟据等价关系的自反性})$\\
+因此得证。
+\end{solution}
