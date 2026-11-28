@@ -68,6 +68,7 @@ d):\\
 \Rightarrow&\mathcal{R}\cup \mathcal{R}^\prime=X^2
 \end{align*}
 \end{solution}
+\newpage
 \begin{exercise}.\\
     \label{def:b1-c1-s3-q2-layer}
     设$f:X\to Y$是映射。元素$y\in Y$的原像$f^{-1}(y)\subset X$称为$y$上的层\\
@@ -109,12 +110,12 @@ b):\\
 \Rightarrow&f(a)=f(c)\\
 \Rightarrow&a\mathcal{R}c
 \end{align*}
-综上,$\mathcal{R}$为等价关系
+综上,$\mathcal{R}$为等价关系\\
 c):\\
 \begin{align*}
 &\text{若}\exists y_1,y_2,(y_1\neq y_2)\land \mathbf{L}(y_1)\cap \mathbf{L}(y_2)\neq \varnothing\\
 \Rightarrow & \exists x_1\in \mathbf{L}(y_1)\cap \mathbf{L}(y_2)\\
-\Rightarrow &\text{由定义}: f(x_1)=y_1\land f(x_2)=y_2\land(y_1\neq y_2)\\
+\Rightarrow &\text{由定义}: f(x_1)=y_1\land f(x_1)=y_2\land(y_1\neq y_2)\\
 \Rightarrow &\text{而这于映射的单值性矛盾，因此不同的层必定不相交}\\
 &\forall x_1\in X,f(x_1)\in Y,\text{假设}f(x_1)=y_1\\
 \Rightarrow& x_1\in \mathbf{L}(y_1)\\
@@ -133,4 +134,113 @@ d):\\
 再证明任何一个$x\in X$均属于一个等价类:\\
 显然，$\forall x_0\in X,x_0\in [x_0](\text{跟据等价关系的自反性})$\\
 因此得证。
+\end{solution}
+\newpage
+\begin{exercise}
+设$f:X\to Y$是$X$到$Y$的映射，请证明:\\
+\begin{align*}
+&\text{如果}A\text{与}B\text{是}X\text{的子集，则}:\\
+&a):(A\subset B)\Rightarrow (f(A)\subset f(B))\nRightarrow (A\subset B)\\
+&b):(A\neq \varnothing)\Rightarrow (f(A)\neq \varnothing)\\
+&c):f(A\cap B)\subset f(A)\cap f(B)\\
+&d):f(A\cup B)=f(A)\cup f(B)\\
+&\text{如果}A^\prime\text{与}B^\prime\text{是}Y\text{的子集，则}:\\
+&e):(A^\prime \subset B^\prime)\Rightarrow (f^{-1}(A^\prime)\subset f^{-1}(B^\prime))\\
+&f):f^{-1}(A^\prime \cap B^\prime)=f^{-1}(A^\prime)\cap f^{-1}(B^\prime)\\
+&g):f^{-1}(A^\prime \cup B^\prime)=f^{-1}(A^\prime)\cup f^{-1}(B^\prime)\\
+&\text{如果}Y\supset A^\prime \supset B^\prime,\text{则}:\\
+&h):f^{-1}(A^\prime \backslash  B^\prime )=f^{-1}(A^\prime)\backslash f^{-1}(B^\prime)\\
+&i):f^{-1}(C_Y A^\prime)=C_X f^{-1}(A^\prime)\\
+&\text{对于任何集合}A\subset X\text{及任何集合}B^\prime \subset Y,\text{有}:\\
+&j):f^{-1}(f(A))\supset A\\
+&k):f(f^{-1}(B^\prime))\subset B^\prime
+\end{align*}
+\end{exercise}
+\begin{solution}.\\
+a):\\
+\begin{align*}
+&A\subset B\\
+\Leftrightarrow& \forall x\in A, x\in B\\
+\Rightarrow& \forall y\in f(A),\exists x_0\in A,f(x_0)=y\land x_0\in B\\
+\Rightarrow& \exists x_0\in B,f(x_0)=y\\
+\Rightarrow& y\in f(B)\\
+\Rightarrow& f(A)\subset f(B)
+\end{align*}
+考虑$f:\{0,1,2\}\to \{1,2\},f(0)=1,f(1)=1,f(2)=2,A=\{0\},B=\{0,1\}$\\
+则可得到一个反例
+b):\\
+\begin{align*}
+A\neq \varnothing\Rightarrow& \exists x_0\in A\\
+\Rightarrow&\text{由映射定义},f(x_0)\in Y;f(x_0)\in f(A)\\
+\Rightarrow&f(A)\neq \varnothing
+\end{align*}
+c):\\
+\begin{align*}
+&\forall c\in f(A\cap B)\\
+\Rightarrow& \exists x_0\in A\cap B, f(x_0)=c\\
+\Rightarrow& ((x_0\in A)\land(x_0\in B))\land (f(x_0)=c)\\
+\Rightarrow& ((x_0\in A)\land (f(x_0)=c))\land ((x_0\in B)\land (f(x_0)=c))\\
+\Rightarrow& (c\in f(A))\land (c\in f(B))\\
+\Rightarrow& c\in f(A)\cap f(B)
+\end{align*}
+d):\\
+\begin{align*}
+&y\in f(A\cup B)\\
+\Leftrightarrow& \exists x_0\in A\cup B \land f(x_0)=y\\
+\Leftrightarrow& \exists x_0, ((x_0\in A)\lor (x_0\in B))\land f(x_0)=y\\
+\Leftrightarrow& \exists x_0, ((x_0\in A)\land f(x_0)=y)\lor((x_0\in B)\land f(x_0)=y)\\
+\Leftrightarrow& (y\in f(A))\lor(y\in f(b))\\
+\Leftrightarrow& y\in f(A)\cup f(B)
+\end{align*}
+e):\\
+\begin{align*}
+&A^\prime \subset B^\prime\\
+\Rightarrow& \forall y\in A^\prime ,y\in B^\prime\\
+&\text{又} f^{-1}(A^\prime)=\{x|f(x)\in A^\prime\}\\
+\Rightarrow& \forall x\in X,f(x)\in A^\prime \to f(x)\in B^\prime\\
+\Rightarrow& \forall x\in f^{-1}(A^\prime), f(x)\in B^\prime\\
+\Rightarrow& x\in f^{-1}(B^\prime)\\
+\Rightarrow& f^{-1}(A^\prime)\subset f^{-1}(B^\prime)
+\end{align*}
+f):\\
+\begin{align*}
+&x\in f^{-1}(A^\prime \cap B^\prime)\\
+\Leftrightarrow& f(x)\in (A^\prime \cap B^\prime)\\
+\Leftrightarrow& (f(x) \in A^\prime)\land (f(x)\in B^\prime)\\
+\Leftrightarrow& (x\in f^{-1}(A^\prime))\land (x\in f^{-1}(B^\prime))\\
+\Leftrightarrow& x\in f^{-1}(A^\prime)\cap f^{-1}(B^\prime) 
+\end{align*}
+\newpage
+g):\\
+\begin{align*}
+&x\in f^{-1}(A^\prime \cup B^\prime)\\
+\Leftrightarrow& f(x)\in (A^\prime \cup B^\prime)\\
+\Leftrightarrow& (f(x) \in A^\prime)\lor (f(x)\in B^\prime)\\
+\Leftrightarrow& (x\in f^{-1}(A^\prime))\lor (x\in f^{-1}(B^\prime))\\
+\Leftrightarrow& x\in f^{-1}(A^\prime)\cup f^{-1}(B^\prime) 
+\end{align*}
+h):\\
+\begin{align*}
+&x\in f^{-1}(A^\prime \backslash B^\prime)\\
+\Leftrightarrow& f(x)\in A^\prime\land \lnot( f(x)\in B^\prime)\\
+\Leftrightarrow& (x\in f^{-1}(A^\prime))\land \lnot (x\in f^{-1}(B^\prime))\\
+\Leftrightarrow& x\in f^{-1}(A^\prime)\backslash f^{-1}(B^\prime)
+\end{align*}
+i):\\
+在$h)$的证明中，取$A^\prime =Y$即可，仅需要变量换名。\\
+j):\\
+\begin{align*}
+&\forall x\in A\\
+\Rightarrow& f(x)\in f(A)\\
+\Rightarrow x\in f^{-1}(f(A))\\
+\Rightarrow f^{-1}(f(A))\supset A
+\end{align*}
+k):\\
+\begin{align*}
+&\forall y\in f(f^{-1}(B^\prime))\\
+\Rightarrow& \exists x\in f^{-1}(B^\prime),f(x)=y\\
+\Rightarrow& \exists (x\in X\land f(x)\in B^\prime)\land f(x)=y\\
+\Rightarrow& y\in B^\prime\\
+\Rightarrow& f(f^{-1}(B^\prime))\subset B^\prime
+\end{align*}
 \end{solution}
